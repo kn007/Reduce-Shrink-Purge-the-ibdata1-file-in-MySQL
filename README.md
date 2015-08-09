@@ -24,7 +24,7 @@ As you want to reclaim the space from ibdata1:
 
 1.In /etc/my.cnf -> [mysqld], add "innodb_force_recovery = 4" to set InnoDB read-only. Make sure "innodb_data_file_path" had a true value.
 
-2.Start MySQL service. Do a mysqldump of all databases except the mysql, information_schema, and performance_schema databases.(Using mysql_dump_all_db.sh to do it)
+2.Start MySQL service. Do a mysqldump of all databases except the mysql, information_schema, and performance_schema databases.(you can using mysql_dump_all_db.sh to do it, it's default to except for mysql, information_schema, and performance_schema databases)
 
 3.Drop all databases except the above 3 databases.
 
