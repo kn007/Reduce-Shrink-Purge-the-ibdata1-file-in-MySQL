@@ -18,7 +18,7 @@ mysql ${MYSQL_CONN} -ANe"${SQL}" > ${DBLISTFILE}
 DBLIST=""
 for DB in `cat ${DBLISTFILE}` ; do DBLIST="${DBLIST} ${DB}" ; done
 
-MYSQLDUMP_OPTIONS="--routines --triggers --single-transaction"
+MYSQLDUMP_OPTIONS="--routines --triggers --lock-all-tables"
 mysqldump ${MYSQL_CONN} ${MYSQLDUMP_OPTIONS} --databases ${DBLIST} > all-dbs.sql
 
 exit
