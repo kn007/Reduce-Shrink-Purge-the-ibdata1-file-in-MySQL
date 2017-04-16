@@ -10,7 +10,7 @@ MYSQL_CONN="-u${MYSQL_USER} -p${MYSQL_PASS}"
 #
 
 SQL="SELECT schema_name FROM information_schema.schemata WHERE schema_name NOT IN"
-SQL="${SQL} ('mysql','information_schema','performance_schema','sys')"
+SQL="${SQL} ('mysql','information_schema','performance_schema','sys','temp')"
 
 DBLISTFILE=/tmp/DatabasesToDump.txt
 mysql ${MYSQL_CONN} -ANe"${SQL}" > ${DBLISTFILE}
