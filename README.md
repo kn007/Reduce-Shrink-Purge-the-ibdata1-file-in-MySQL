@@ -1,16 +1,16 @@
-##Reduce/Shrink/Purge the ibdata1 file in MySQL
+## Reduce/Shrink/Purge the ibdata1 file in MySQL
 
 That ibdata1 isn't shrinking is a particularly annoying feature of MySQL. The ibdata1 file cannot actually be shrunk unless you delete all databases, remove the files and reload a dump.
 
 This project could help to reduce the ibdata1 file size.
 
-###mysql_dump_all_db.sh
+### mysql_dump_all_db.sh
 
 **Backup all MySQL databases except some databases**
 
 Default to except mysql, information_schema, and performance_schema.
 
-###mysql_innodb_basic_tables.sql
+### mysql_innodb_basic_tables.sql
 
 **MySQL InnoDB basic tables**
 
@@ -18,7 +18,7 @@ These are used in MySQL 5.6, and though are not required, will show errors in th
 
 
 
-##Usage
+## Usage
 
 As you want to reclaim the space from ibdata1:
 
@@ -38,10 +38,10 @@ As you want to reclaim the space from ibdata1:
 
 8.Done. Restart MySQL service again to ensure error-free results. Thank you.
 
-##Test
+## Test
 
 Testing in MySQL 5.6.25.
 
-##About
+## About
 
 [kn007's blog](https://kn007.net) 
